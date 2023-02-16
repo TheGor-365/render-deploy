@@ -80,6 +80,7 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
+  url: <%= ENV["DATABASE_URL"] %>
   <<: *default
   database: render_deploy_production
   username: render_deploy

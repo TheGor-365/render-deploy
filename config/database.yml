@@ -1,25 +1,45 @@
+# default: &default
+#   adapter: postgresql
+#   encoding: unicode
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#
+# development:
+#   <<: *default
+#   username: postgres
+#   database: render-deploy-dev
+#   host: localhost
+#   port: 5432
+#
+# test:
+#   <<: *default
+#   username: postgres
+#   database: render-deploy-test
+#   host: localhost
+#   port: 5432
+#
+# production:
+#   <<: *default
+#   database: render-deploy
+#   username: postgres
+#   url: <%= ENV["DATABASE_URL"] %>
+#   password: <%= ENV["RENDER_DEPLOY_DATABASE_PASSWORD"] %>
+
 default: &default
   adapter: postgresql
-  encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: postgres
+  host: localhost
+  port: 5432
 
 development:
   <<: *default
-  username: postgres
-  database: render-deploy-dev
-  host: localhost
-  port: 5432
+  database: render-deploy-gt
 
 test:
   <<: *default
-  username: postgres
   database: render-deploy-test
-  host: localhost
-  port: 5432
 
 production:
   <<: *default
-  database: render-deploy
-  username: postgres
-  url: <%= ENV["DATABASE_URL"] %>
-  password: <%= ENV["RENDER_DEPLOY_DATABASE_PASSWORD"] %>
+  database: render-deploy-pro

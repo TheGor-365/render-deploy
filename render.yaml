@@ -23,8 +23,9 @@
 
 databases:
   - name: postgres
-    databaseName: render-deploy-pro
-    user: postgres
+    # databaseName: render-deploy-pro
+    # user: postgres
+    ipAllowList: []
 
 services:
   - type: web

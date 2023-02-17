@@ -29,17 +29,20 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
   username: postgres
-  host: localhost
-  port: 5432
 
 development:
   <<: *default
   database: render-deploy-gt
+  host: localhost
+  port: 5432
 
 test:
   <<: *default
   database: render-deploy-test
+  host: localhost
+  port: 5432
 
 production:
   <<: *default
   database: render-deploy-pro
+  url: <%= ENV["DATABASE_URL"] %>

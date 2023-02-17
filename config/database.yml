@@ -44,5 +44,5 @@ test:
 
 production:
   <<: *default
-  database: render-deploy-pro
+  database: render-deploy
   url: <%= ENV["DATABASE_URL"] %>

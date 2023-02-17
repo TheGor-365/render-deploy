@@ -83,5 +83,5 @@ production:
   url: <%= ENV["DATABASE_URL"] %>
   <<: *default
   database: render-deploy
-  username: render-deploy
+  username: postgres
   password: <%= ENV["RENDER_DEPLOY_DATABASE_PASSWORD"] %>

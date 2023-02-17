@@ -22,7 +22,7 @@
 #     maxmemoryPolicy: noeviction
 
 databases:
-  - name: render-deploy
+  - name: postgres
     databaseName: render-deploy
     user: render-deploy
 

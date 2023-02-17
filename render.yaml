@@ -23,8 +23,8 @@
 
 databases:
   - name: postgres
-    # databaseName: render-deploy-pro
-    # user: postgres
+    databaseName: render-deploy-pro
+    user: postgres
 
 services:
   - type: web
